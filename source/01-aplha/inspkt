@@ -2,6 +2,9 @@
 use Switch;
 use FTN::Packet;
 
+#Turn off autobuffering
+local $| = 1;
+
 #Version information
 my $version = " .01-alpha";
 my $ver_short = "Perl Packet Inspector : TBX Software : bbs.thebytexchange.com:23\nVersion:" . $version . "\n\n";
@@ -9,12 +12,22 @@ my $ver_short = "Perl Packet Inspector : TBX Software : bbs.thebytexchange.com:2
 print $ver_short;
 
 
+print "DO NOT USE THIS APLHA VERSION... IT IS UNTESTED...\n";
+print "PAUSING FOR 10 SECONDS FOR YOU TO THINK ABOUT IT...\n";
+print "HIT CTL-C TO QUIT\n";
+
+
+for (my $i = 0; $i <= 10; $i++) {
+	printf("#");
+	sleep 1;
+}
+
+print "\n";
+
+
+
+
 check_arguments();
-
-
-
-
-
 
 
 sub check_arguments {
@@ -24,7 +37,7 @@ sub check_arguments {
 		case "-ver"     {print_version()}
 		case "-hver"    {print_version(); print_help();}
 		case ""         {print "Error 100: No argument(s) specified, exiting.\n -h for help information.\n"; exit}
-		case "-install" {install_dependencies()}		
+		case "-install" {install_dependencies()}
 		case "-errors"  {print error_list()}
 		else		{print "Error 101: Invalid argument(s) specificed.\n-h for help information.\n"}
 	}
@@ -122,7 +135,7 @@ for $i ( 0 .. $#{$messages} ) {
 
 	my $answer = <STDIN>;
 	$answer = uc($answer);
-	chomp($answer);	
+	chomp($answer);
 
 	if ($answer eq "Y") {
  		print "           Message Body:\n";
@@ -135,30 +148,15 @@ for $i ( 0 .. $#{$messages} ) {
 	        <STDIN>;
 		return 0;
 	}
-	
+
 	if ($answer eq "N") {
 		exit;
         }
-	
+
 	else {
 	print "\nError 120: Unexpected entry.\n";}
 	return 0;
 
 	}
-
-}
-
-sub install_dependencies {
-print "\nInstalling System Libraries needed for Packet Inspector...\n";
-sleep 1;
-print "Installing FTN::Packet Library... Please wait...\n";
-system("cpan install FTN::Packet");
-sleep 5;
-print "Installing Switch... Please wait.... \n";
-system("cpan install Switch");
-sleep 5;
-print "Completed. Press any key: ";
-<STDIN>;
-return 0;
 
 }
