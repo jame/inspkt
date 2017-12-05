@@ -86,12 +86,21 @@ print "inspkt Error List\n";
 print "=========================\n\n";
 print "error 100  - No argument specified on command line - none\n";
 print "error 101  - Invalid argument specified on command line\n";
+print "error 104  - No filename specified for packet for use with -v\n";
 print "error 120  - Invalid option (y/n) selected. Must select either Y or N\n";
 return 0;
 }
 
 
 sub view_packet {
+
+#Check for filename give
+if ($ARGV[1] == "") {
+ 	print "Error 104: No packet filename specificed.\n";
+	return 0;
+	}
+
+#Check to ensure file exists - that was give for filename for packet
 
 my $filename = $ARGV[1];
 
