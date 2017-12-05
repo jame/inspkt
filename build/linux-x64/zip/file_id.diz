@@ -1,0 +1,11 @@
+===========================================
+inspkt Linux 64 bit version .01-alpha
+Command Line Packet inspection tool.
+Written by Nugax @ bbs.thebytexchange.com
+
+Description: This tool allows the user
+to view entire packet contents without
+altering the packet. Includes header,
+kludge lines, and entire message(s).
+(ALPHA VERSION) - USE AT YOUR RISK
+===========================================
