@@ -125,9 +125,9 @@ for $i ( 0 .. $#{$messages} ) {
 
 	#Print packet contents
 	print "\n";
-	print "=======================================\n";
+	print "==================================================================\n";
 	print " Packet $filename contents\n";
-	print "=======================================\n\n";
+	print "==================================================================\n\n";
 	print "Message Area: " . $msg_area . "\n";
 	print "Message Date: " . $msg_date . "\n";
 	print "To Node: " . $msg_tonode . "\n";
@@ -137,7 +137,7 @@ for $i ( 0 .. $#{$messages} ) {
 	print "MSG ID: " . $msg_msgid . "\n";
 	print "Reply ID: " . $msg_replyid . "\n\n";
 	print "          Kludge Line(s):\n ";
-	print "        -------------------\n\n";
+	print "  ---------------------------------\n\n";
 	print $msg_ctrl . "\n\n";
 
 	print "Do you want to view the message? (y/n) ";
@@ -148,7 +148,8 @@ for $i ( 0 .. $#{$messages} ) {
 
 	if ($answer eq "Y") {
  		print "           Message Body:\n";
-	        print "         ----------------\n\n";
+		print "  ---------------------------------\n\n";
+
 
 	        print $msg_body;
 
