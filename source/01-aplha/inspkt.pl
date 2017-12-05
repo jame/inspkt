@@ -1,4 +1,12 @@
 #!/usr/bin/perl
+
+#=======================================================================================================
+#Perl Packet Inspector
+#Written By: nugax (Chad Adams)
+#Contact: nugax@1:19/37@fidonet, chad adams@40:1/100@cybernet, or nugax@thebytexchange.com
+#Github: http://www.github.com/chadeadams/inspkt
+#=======================================================================================================
+
 use Switch;
 use FTN::Packet;
 
