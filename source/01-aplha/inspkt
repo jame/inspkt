@@ -95,7 +95,7 @@ return 0;
 sub view_packet {
 
 #Check for filename give
-if ($ARGV[1] == "") {
+if ($ARGV[1] eq "") {
  	print "Error 104: No packet filename specificed.\n";
 	return 0;
 	}
