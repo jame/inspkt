@@ -147,7 +147,8 @@ for $i ( 0 .. $#{$messages} ) {
 	chomp($answer);
 
 	if ($answer eq "Y") {
- 		print "           Message Body:\n";
+		print "\n\n";
+		print "           Message Body:\n";
 		print "  ---------------------------------\n\n";
 
 
