@@ -5,10 +5,10 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME                => 'inspkt',
     AUTHOR              => 'Chad Adams <nugax@thebytexchange.com>',
-    VERSION_FROM        => 'bin/inspkt',
-    ABSTRACT_FROM       => 'bin/inspkt',
+    VERSION_FROM        => 'bin/inspkt.pl',
+    ABSTRACT_FROM       => 'bin/inspkt.pl',
     LICENSE          	=> 'GPL-3',
-    EXE_FILES           => [ qw( bin/inspkt ) ],
+    EXE_FILES           => [ qw( bin/inspkt.pl ) ],
     PL_FILES            => {},
     PREREQ_PM => {
         'Switch'        => 0,
