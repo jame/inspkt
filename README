@@ -1,0 +1,44 @@
+
+
+The  script can be used create listings of nodes from an Fidonet/FTN
+Nodelist by the nodelist flags they are listed with.
+
+Required, neccessary and/or useful modules, etc.:
+
+FTN::Packet     If it is not already installed, it can be obtained from CPAN
+                (www.cpan.org).
+
+Switch          May already be installed on your system; if not, one place
+                it may be obtained is at CPAN (www.cpan.org).
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this application with
+the perldoc command.
+
+    perldoc inspkt
+
+The  application is hosted and the code history for it is available in a git
+repository at GitHub:
+
+https://github.com/chadeadams/inspkt
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2017 Chad Adams <nugax@thebytexchange.com>
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of GNU General Public License v3 (GPL-3).
+
+
